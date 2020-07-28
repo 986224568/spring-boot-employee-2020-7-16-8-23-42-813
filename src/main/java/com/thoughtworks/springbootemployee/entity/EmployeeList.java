@@ -13,4 +13,12 @@ public class EmployeeList {
     private void addEmployee(Employee employee) {
         this.employeeList.add(employee);
     }
+
+    private void deleteEmployee(int employeeID) {
+        for (Employee employee : employeeList) {
+            if (employee.getId() == employeeID) {
+                employeeList.remove(employee);
+            }
+        }
+    }
 }
