@@ -46,4 +46,9 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
         return null;
     }
+
+    @Override
+    public List<Employee> getAllEmployee() {
+        return employeeList;
+    }
 }
