@@ -22,7 +22,7 @@ public class EmployeeList {
         }
     }
 
-    private void updateEmployee (Employee employeeDTO) {
+    private void updateEmployee(Employee employeeDTO) {
         for (Employee employee : this.employeeList) {
             if (employee.getId() == employeeDTO.getId()) {
                 employee.setAge(employeeDTO.getAge());
@@ -30,6 +30,15 @@ public class EmployeeList {
                 employee.setName(employeeDTO.getName());
             }
         }
+    }
+
+    private Employee queryEmployee(int id) {
+        for (Employee employee : employeeList) {
+            if (employee.getId() == id) {
+                return employee;
+            }
+        }
+        return null;
     }
 
 }
