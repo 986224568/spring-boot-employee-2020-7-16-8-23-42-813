@@ -21,4 +21,15 @@ public class EmployeeList {
             }
         }
     }
+
+    private void updateEmployee (Employee employeeDTO) {
+        for (Employee employee : this.employeeList) {
+            if (employee.getId() == employeeDTO.getId()) {
+                employee.setAge(employeeDTO.getAge());
+                employee.setGender(employeeDTO.getGender());
+                employee.setName(employeeDTO.getName());
+            }
+        }
+    }
+
 }
