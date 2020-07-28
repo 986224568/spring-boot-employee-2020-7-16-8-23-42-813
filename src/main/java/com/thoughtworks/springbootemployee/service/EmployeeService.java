@@ -1,8 +1,12 @@
 package com.thoughtworks.springbootemployee.service;
 
+import com.thoughtworks.springbootemployee.entity.Employee;
+import org.springframework.stereotype.Service;
+
+@Service
 public interface EmployeeService {
-    void addEmployee();
-    void deleteEmployee();
-    void updateEmployee();
-    void queryEmployee();
+    void addEmployee(Employee employee);
+    void deleteEmployee(int employeeID);
+    void updateEmployee(Employee employeeDTO);
+    void queryEmployee(int id);
 }
